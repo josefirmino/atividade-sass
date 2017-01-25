@@ -1,0 +1,57 @@
+// [Árvore de pesquisas]
+// 1.Placeholder
+// 2.Mixin dos temas
+// 3.Theme
+// 4.Imports
+
+// Placeholder
+%base{
+	width: 600px;
+	height: 80px;
+	border: 1px solid $purple;
+	float: left;
+	position: relative;
+	background-color: $white;
+}
+
+// Mixin dos temas
+@mixin blue($bg-blue: #fff) {
+	@if $theme-blue {
+		border: 1px solid $dark;
+		background-color: $blue;
+		.logo h2{
+			color: $white;
+		}
+		.menu ul li a {
+			color: $white;
+			&:hover{
+				background-color: $dark;
+				color: $white;
+			}
+		}
+	} 
+
+	@if $theme-dark {
+		border: 1px solid $dark;
+		background-color: $dark;
+		.logo h2{
+			color: $yeloow;
+		}
+		.menu ul li a {
+			color: $white;
+			&:hover{
+				background-color: $yeloow;
+				color: $dark;
+			}
+		}
+	}
+}
+
+// Theme
+.theme{
+	@include blue;
+	@extend %base;
+}
+
+// Imports
+@import "menu.scss";

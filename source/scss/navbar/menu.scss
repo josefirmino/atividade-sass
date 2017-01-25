@@ -1,0 +1,47 @@
+// [Árvore de pesquisas]
+// 1.Logo style 
+// 2.Links style 
+
+// Logo style
+.logo h2{
+	position: relative;
+	font-family: 'Hammersmith One';
+	font-size: 35px;
+	float: left;
+	margin-top: 0;
+	color: $purple;
+	padding: 18px;
+}
+
+// Links style
+.menu ul{
+	float: right;
+
+	li{
+		font-family: 'Lato', serif;
+		text-transform: uppercase;
+		list-style: none;
+		font-weight: bold;
+		float: left;
+		margin-top: 15px;
+		margin-right: 20px;
+
+		a {
+			text-decoration: none;
+			color: $purple;
+			padding: 5px;
+
+			&:hover{
+				background-color: $purple;
+				color: $white;
+				padding: 5px;
+				border-radius: 2px;
+
+			}
+
+		}
+
+	}
+
+}
+

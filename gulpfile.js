@@ -23,6 +23,6 @@ gulp.task('minify-html', function() {
 
 // Watch
 gulp.task('default',function(){
-	 gulp.watch(SRCcss, ['sass'])
+	 gulp.watch('./source/**/*.scss', ['sass'])
 	 gulp.watch(SRChtml, ['minify-html'])
 });

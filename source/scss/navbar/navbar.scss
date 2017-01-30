@@ -8,49 +8,30 @@
 %base{
 	width: 600px;
 	height: 80px;
-	border: 1px solid $purple;
 	float: left;
-	position: relative;
-	background-color: $white;
+	position: relative; 
 }
 
 // Mixin dos temas
-@mixin blue($bg-blue: #fff) {
-	@if $theme-blue {
-		border: 1px solid $dark;
-		background-color: $blue;
+@mixin theme($bg: $white, $color: $purple, $border: $purple) {
+
+		border: 1px solid $border;
+		background-color: $bg;
 		.logo h2{
-			color: $white;
+			color: $color;
 		}
 		.menu ul li a {
-			color: $white;
+			color: $color;
 			&:hover{
 				background-color: $dark;
 				color: $white;
 			}
 		}
-	} 
-
-	@if $theme-dark {
-		border: 1px solid $dark;
-		background-color: $dark;
-		.logo h2{
-			color: $yeloow;
-		}
-		.menu ul li a {
-			color: $white;
-			&:hover{
-				background-color: $yeloow;
-				color: $dark;
-			}
-		}
-	}
 }
 
-// Theme
-.theme{
-	@include blue;
+.navbar {
 	@extend %base;
+	@include theme;
 }
 
 // Imports
